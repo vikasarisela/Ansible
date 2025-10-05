@@ -1,6 +1,6 @@
--name: Echo Printing
-hosts: frontend
-tasks:
+- name: Echo Printing
+  hosts: frontend
+  tasks:
    - name: Printing the message
      ansible.builtin.debug:
        msg: "hello how are you"

@@ -1,0 +1,10 @@
+- name: printing variables
+  host: local
+  connection: local 
+  vars:
+    Course: AWS DevOps
+    Duration: 4 months
+  tasks:
+  - name: printing the global variables
+  ansible.builtin.debug:
+     msg: "Attending {{Course}}, {{Duration}}"

@@ -1,0 +1,14 @@
+- name: vars prompt example
+  host: local
+  connection: local
+  vars_prompt:
+  - name: username
+    prompt: what is your username?
+    private: false
+  - name: password
+    prompt: what is your password?
+    private: true
+- tasks:
+  - name: printing credentials
+    ansible.builtin.debug:
+      msg: "your username {{name}} and password is {{password}}"

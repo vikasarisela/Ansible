@@ -1,0 +1,7 @@
+- name: printing variables
+  host: local
+  connection: local 
+  tasks:
+  - name: printing the global variables
+    ansible.builtin.debug:
+      msg: "Attending {{Course}}, {{Duration}}"

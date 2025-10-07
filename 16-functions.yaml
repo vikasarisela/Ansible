@@ -1,7 +1,12 @@
 - name: functions
   hosts: local
   connection: local
+  vars:
+  fruits: apple,banana,orange
   tasks:
   - name: default variable
     ansible.builtin.debug:
       msg: "Hello, {{ name | default('Ramesh') }}"
+  - name: string to lists
+    ansible.builtin.debug:
+      msg: "Hello, {{ fruits | split(',') }}"
